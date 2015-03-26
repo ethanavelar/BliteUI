@@ -1,0 +1,24 @@
+{
+  "name": "Brite UI",
+  "version": "0.0.1",
+  "authors": [
+    "Ethan Taylor <etaylor1016@gmail.com>"
+  ],
+  "description": "Official website for the brite UI icon pack.",
+  "keywords": [
+    "brite",
+    "icon"
+  ],
+  "license": "MIT",
+  "homepage": "ethantaylor.me",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.5"
+  }
+}
