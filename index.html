@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLITE UI</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900italic' rel='stylesheet' type='text/css'>
-    <script src="bower_components/platform/platform.js"></script>
+    <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-    <link rel="import" href="bower_components/polymer/polymer.html">
     <link rel="import" href="elements.html">
     
     <style shim-shadowdom>
@@ -336,7 +337,33 @@
         div.imgCont {
             width: 100%;
             height: 80%;
-            margin-top: 440px;
+            margin-top: 460px;
+        }
+        
+        section.modern {
+            width: 100%;
+            height: 70vh;
+            margin-top: 200px;
+        }
+        
+        section.modern h2 {
+            padding-top: 10vh;
+            text-align: center;
+            font-weight: 300;
+        }
+        
+        section.modern img.icon {
+            width: 100px;
+            min-width: 100px;
+            height: 100px;
+            min-height: 100px;
+            padding-left: 20px;
+        }
+        
+        section.modern div.icons {
+            margin-top: 18vh;
+            width: 100%;
+            min-height: 100px;
         }
 
 
@@ -348,9 +375,6 @@
     </style>
 </head>
 <body>
-    
-    <template is="auto-binding">
-    <div id="clicker" on-tap="{{clickAction}}">
         <core-drawer-panel responsiveWidth="1000000px">
           <core-header-panel drawer>
               
@@ -361,27 +385,33 @@
                 <paper-icon-button class="menu" icon="menu" core-drawer-toggle></paper-icon-button>
                 <div flex></div>
                 <paper-menu-button>
-                    <paper-icon-button src="../img/share-variant.png" noink></paper-icon-button>
+                    <paper-icon-button icon="more-vert" noink></paper-icon-button>
                     <paper-dropdown class="dropdown" halign="right">
-                      <core-menu class="menu">
-                          <paper-item>Google+</paper-item>
-                          <paper-item>Twitter</paper-item>
-                          <paper-item>Facebook</paper-item>
+                      <core-menu class="more-vert">
+                          <paper-item>More</paper-item>
                       </core-menu>
                     </paper-dropdown>
                   </paper-menu-button>
-                <paper-icon-button icon="more-vert"></paper-icon-button>
             </core-toolbar>
               
             <div class="content">
                 <main>
                     
                     <h1 class="title">BLITE UI</h1>
-                    <paper-fab src="img/chevron-down.png"></paper-fab>
+                    <paper-fab src="img/chevron-down.png" class="down"></paper-fab>
                     
                     <div class="imgCont" horizontal center-justified layout>
                         <core-image class="second" src="img/cover.jpg" self-center></core-image>
                     </div>
+                    
+                    <section class="modern">
+                        <h2>Modern Lollipop Design, New Age Black and White.</h2>
+                        <div class="icons" horizontal center-justified layout>
+                            <img src="img/calendar-icon.png" class="icon">
+                            <img src="img/print-icon.png" class="icon">
+                            <img src="img/internet-icon.png" class="icon">
+                        </div>
+                    </section>
                 </main>
                 
                <footer horizontal center-justified layout>
@@ -395,6 +425,5 @@
               
         </core-scroll-header-panel>
     </core-drawer-panel>
-        </template>
 </body>
 </html>
