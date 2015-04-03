@@ -241,7 +241,6 @@
             width: 100%;
             height: 500px;
             border-top: 1px solid black;
-            margin-top: 350px;
             position: relative;
         }
         footer h3 {
@@ -365,11 +364,78 @@
             width: 100%;
             min-height: 100px;
         }
-
+        
+        section.why {
+            width: 100%;
+            height: 70vh;
+            margin-top: 100px;
+        }
+        
+        section.why h2 {
+            padding-top: 10vh;
+            text-align: center;
+            font-weight: 300;
+        }
+        
+        
+        section.about {
+            width: 100%;
+            height: 70vh;
+            margin-top: 175px;
+            background-color: black;
+            color: white;
+        }
+        
+        section.about h2 {
+            padding-top: 10vh;
+            text-align: center;
+            font-weight: 300;
+            padding-bottom: 13vh;
+        }
+        
+        div.members {
+            min-width: 125px;
+            width: 100%;
+            min-height: 125px;
+            margin: 0 auto;
+        }
+        
+        img.round {
+            border-radius: 50%;
+            width: 125px;
+            height: 125px;
+            min-width: 125px;
+            min-height: 125px;
+            margin-right: 25px;
+            -webkit-transition: opacity .2s ease-in-out;
+            -moz-transition: opacity .2s ease-in-out;
+            -ms-transition: opacity .2s ease-in-out;
+            -o-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+        }
+        
+        img.round:hover {
+            opacity: 0.8;
+        }
 
         @media screen and (max-width: 768px) {
             section.post {
                 width: 100%;
+            }
+            img.round {
+                border-radius: 50%;
+                width: 75px;
+                height: 75px;
+                min-width: 75px;
+                min-height: 75px;
+                margin-right: 25px;
+            }
+            div.stack {
+                min-width: 100%;
+                width: 100%;
+                height: 125px;
+                margin-top: 100px;
+                margin-left: -90%;
             }
         }
     </style>
@@ -400,6 +466,7 @@
                     <h1 class="title">BLITE UI</h1>
                     <paper-fab src="img/chevron-down.png" class="down"></paper-fab>
                     
+    
                     <div class="imgCont" horizontal center-justified layout>
                         <core-image class="second" src="img/cover.jpg" self-center></core-image>
                     </div>
@@ -410,6 +477,24 @@
                             <img src="img/calendar-icon.png" class="icon">
                             <img src="img/print-icon.png" class="icon">
                             <img src="img/internet-icon.png" class="icon">
+                        </div>
+                    </section>
+                    
+                    <section class="why">
+                        <h2>Why Blite UI?</h2>
+                    </section>
+                    
+                    <section class="about">
+                        <h2 class="title">About Us</h2>
+                        <div class="members" horizontal center-justified layout>
+                            <img class="round" src="https://lh6.googleusercontent.com/-wrY0cdl4t9M/VQo8UoiszyI/AAAAAAAADMs/g-79xs2PC6Y/w680-h677-no/7aa371d6-2a5e-4a6b-bad6-74a1c5570110">
+                            <img class="round" src="https://lh6.googleusercontent.com/-ujDb67hprWA/VR2M_cyUvKI/AAAAAAAACQM/rH9CGhuT8Kc/s500-no/67e14530-f18e-4d3f-b723-68e8b5daa1fd">
+                            <img class="round" src="https://lh4.googleusercontent.com/-07hAqTdhxSM/VOu96EK6VUI/AAAAAAAAGvo/DRSgNnCkb7g/w905-h907-no/image.jpg">
+                            <div class="stack">
+                                <img class="round" src="https://lh6.googleusercontent.com/-V1W1O9RJPxU/VR28Pxv1uVI/AAAAAAAAbJo/Aj1v0Vlcbug/s889-no/3b6ec740-629f-4edc-a278-18e9b4ddb685">
+                                <img class="round" src="https://lh4.googleusercontent.com/-3pgnF50g8rs/VRm61DWUd-I/AAAAAAAAK5Y/XeK_zynA6ME/s384-no/a853f482-5f3c-4dc1-8e95-a35f6d85df6b">
+                                <img class="round" src="https://lh5.googleusercontent.com/-7Ve1p-SYaz8/VRiG95vHB1I/AAAAAAAAHNs/Grzfv8XNVRc/s512-no/31125bf4-f3d7-4e54-837c-31ee509ea6a8">
+                            </div>
                         </div>
                     </section>
                 </main>
