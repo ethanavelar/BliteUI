@@ -217,9 +217,9 @@
         }
         
         div[top] ul {
-            margin: 0;
+            margin: 0px;
+            margin-left: -40px;
             list-style-type: none;
-            text-align: left;
         }
         div[top] li {
             list-style: none;
@@ -233,6 +233,15 @@
             text-align: center;
             margin: 0px;
             padding-top: 14px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .new div:first-child {
+                margin-left: 0px;
+            }
+            .new div:last-child {
+                margin-right: 0px;
+            }
         }
     </style>
 </head>
@@ -252,9 +261,9 @@
                 <section class="subhead" vertical layout>
                     <h2 class="sub">Blite UI Features Tons of Premium Icons and Wallpapers</h2>
                     <paper-lightbox self-center>
-                        <img src="img/thumbnailred.png" data-fullimage="img/wallpaper2red.png"></img>
-                        <img src="img/thumbnail2.png" data-fullimage="img/MaterialWallpaper56.2.png"></img>
-                        <img src="img/thumbnail3.png" data-fullimage="img/wallpaper3.png"></img>
+                            <img src="img/thumbnailred.png" data-fullimage="img/wallpaper2red.png"></img>
+                            <img src="img/thumbnail2.png" data-fullimage="img/MaterialWallpaper56.2.png"></img>
+                            <img src="img/thumbnail3.png" data-fullimage="img/wallpaper3.png"></img>
                     </paper-lightbox>
                 </section>
                 <section class="new">
@@ -305,13 +314,15 @@
        horizontal?="{{!phoneScreen}}">
                         <div auto-vertical flex>
                             <h2>JABE DEVS</h2>
+                            <div flex horizontal center-justified layout>
                             <ul>
                                 <li>Google +</li>
                                 <li>Twitter</li>
                                 <li>Facebook</li>
                             </ul>
                         </div>
-                        <div auto-vertical flex>
+                        </div>
+                        <div auto-vertical flex >
                             <h2>BETA</h2>
                         </div>
                     </div>
