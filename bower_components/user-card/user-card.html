@@ -1,0 +1,47 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../font-roboto/roboto.html">
+
+<polymer-element name="user-card" attributes="name profileImg headerImg">
+	<template>
+		<style>
+			
+			
+		</style>
+		
+        <img class="profile">
+        
+		<div class="overlay">
+            <div class="header">
+                <paper-icon-button icon="close" class="closebtn"></paper-icon-button>
+            </div>
+            <img class="profile">
+            <span class="name"></span>
+            <p class="about"></p>
+        </div>
+        <content></content>
+	</template>
+	<script>
+		Polymer(
+		{
+			imageClick: function(event, detail, sender) 
+			{
+                document.getElementsByClassName('name').innerHTML = name;
+                document.getElementsByClassName('profile').src = profileImg;
+                document.getElementsByClassName('headerImg')
+				this.$.dimmedbackground.classList.add('dimmed-background-activated');
+				this.$.closebutton.classList.add('close-button-visible');
+				var fullImageUrl = event.path[[].indexOf.call(event.path, sender) - 1].getAttribute("data-fullimage");
+				this.$.fullimage.src = fullImageUrl;
+				this.$.fullimage.classList.add('fullsize-image-visible');
+			},
+			
+			closeClick: function(event, detail, sender) 
+			{ 
+				this.$.dimmedbackground.classList.remove('dimmed-background-activated');
+				this.$.closebutton.classList.remove('close-button-visible');
+				this.$.fullimage.classList.remove('fullsize-image-visible');
+			}
+		});
+	</script>
+</polymer-element>

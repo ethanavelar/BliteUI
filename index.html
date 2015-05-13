@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLITE UI</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/animate.css">
     <script src="js/jquery-2.1.3.min.js" type="text/javascript"></script>
-    <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/main.js" type="text/javascript"></script>
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
     <link rel="import" href="elements.html">
@@ -21,376 +21,107 @@
             font-family: 'Roboto', sans-serif;
             background-color: white;
         }
-        main {
+        header {
             width: 100%;
-            min-height: 100%;
-            background-color: white;
-            margin-top: -30px;
+            height: 75vh;
+            background-color: #212121;
+            overflow: hidden;
         }
-        
-        h1.title {
-            text-shadow: rgb(240, 240, 240) 1px 1px,
-    rgb(240, 240, 240) 2px 2px,
-    rgb(240, 240, 240) 3px 3px,
-    rgb(240, 240, 240) 4px 4px,
-    rgb(240, 240, 240) 5px 5px,
-    rgb(240, 240, 240) 6px 6px,
-    rgb(240, 240, 240) 7px 7px,
-    rgb(240, 240, 240) 8px 8px,
-    rgb(240, 240, 240) 9px 9px,
-    rgb(240, 240, 240) 10px 10px,
-    rgb(240, 240, 240) 11px 11px,
-    rgb(240, 240, 240) 12px 12px,
-    rgb(240, 240, 240) 13px 13px,
-    rgb(241, 241, 241) 14px 14px,
-    rgb(241, 241, 241) 15px 15px,
-    rgb(241, 241, 241) 16px 16px,
-    rgb(241, 241, 241) 17px 17px,
-    rgb(241, 241, 241) 18px 18px,
-    rgb(241, 241, 241) 19px 19px,
-    rgb(241, 241, 241) 20px 20px,
-    rgb(241, 241, 241) 21px 21px,
-    rgb(241, 241, 241) 22px 22px,
-    rgb(241, 241, 241) 23px 23px,
-    rgb(241, 241, 241) 24px 24px,
-    rgb(241, 241, 241) 25px 25px,
-    rgb(241, 241, 241) 26px 26px,
-    rgb(242, 242, 242) 27px 27px,
-    rgb(242, 242, 242) 28px 28px,
-    rgb(242, 242, 242) 29px 29px,
-    rgb(242, 242, 242) 30px 30px,
-    rgb(242, 242, 242) 31px 31px,
-    rgb(242, 242, 242) 32px 32px,
-    rgb(242, 242, 242) 33px 33px,
-    rgb(242, 242, 242) 34px 34px,
-    rgb(242, 242, 242) 35px 35px,
-    rgb(242, 242, 242) 36px 36px,
-    rgb(242, 242, 242) 37px 37px,
-    rgb(242, 242, 242) 38px 38px,
-    rgb(242, 242, 242) 39px 39px,
-    rgb(243, 243, 243) 40px 40px,
-    rgb(243, 243, 243) 41px 41px,
-    rgb(243, 243, 243) 42px 42px,
-    rgb(243, 243, 243) 43px 43px,
-    rgb(243, 243, 243) 44px 44px,
-    rgb(243, 243, 243) 45px 45px,
-    rgb(243, 243, 243) 46px 46px,
-    rgb(243, 243, 243) 47px 47px,
-    rgb(243, 243, 243) 48px 48px,
-    rgb(243, 243, 243) 49px 49px,
-    rgb(243, 243, 243) 50px 50px,
-    rgb(243, 243, 243) 51px 51px,
-    rgb(243, 243, 243) 52px 52px,
-    rgb(243, 243, 243) 53px 53px,
-    rgb(244, 244, 244) 54px 54px,
-    rgb(244, 244, 244) 55px 55px,
-    rgb(244, 244, 244) 56px 56px,
-    rgb(244, 244, 244) 57px 57px,
-    rgb(244, 244, 244) 58px 58px,
-    rgb(244, 244, 244) 59px 59px,
-    rgb(244, 244, 244) 60px 60px,
-    rgb(244, 244, 244) 61px 61px,
-    rgb(244, 244, 244) 62px 62px,
-    rgb(244, 244, 244) 63px 63px,
-    rgb(244, 244, 244) 64px 64px,
-    rgb(244, 244, 244) 65px 65px,
-    rgb(244, 244, 244) 66px 66px,
-    rgb(245, 245, 245) 67px 67px,
-    rgb(245, 245, 245) 68px 68px,
-    rgb(245, 245, 245) 69px 69px,
-    rgb(245, 245, 245) 70px 70px,
-    rgb(245, 245, 245) 71px 71px,
-    rgb(245, 245, 245) 72px 72px,
-    rgb(245, 245, 245) 73px 73px,
-    rgb(245, 245, 245) 74px 74px,
-    rgb(245, 245, 245) 75px 75px,
-    rgb(245, 245, 245) 76px 76px,
-    rgb(245, 245, 245) 77px 77px,
-    rgb(245, 245, 245) 78px 78px,
-    rgb(245, 245, 245) 79px 79px,
-    rgb(246, 246, 246) 80px 80px,
-    rgb(246, 246, 246) 81px 81px,
-    rgb(246, 246, 246) 82px 82px,
-    rgb(246, 246, 246) 83px 83px,
-    rgb(246, 246, 246) 84px 84px,
-    rgb(246, 246, 246) 85px 85px,
-    rgb(246, 246, 246) 86px 86px,
-    rgb(246, 246, 246) 87px 87px,
-    rgb(246, 246, 246) 88px 88px,
-    rgb(246, 246, 246) 89px 89px,
-    rgb(246, 246, 246) 90px 90px,
-    rgb(246, 246, 246) 91px 91px,
-    rgb(246, 246, 246) 92px 92px,
-    rgb(246, 246, 246) 93px 93px,
-    rgb(247, 247, 247) 94px 94px,
-    rgb(247, 247, 247) 95px 95px,
-    rgb(247, 247, 247) 96px 96px,
-    rgb(247, 247, 247) 97px 97px,
-    rgb(247, 247, 247) 98px 98px,
-    rgb(247, 247, 247) 99px 99px,
-    rgb(247, 247, 247) 100px 100px,
-    rgb(247, 247, 247) 101px 101px,
-    rgb(247, 247, 247) 102px 102px,
-    rgb(247, 247, 247) 103px 103px,
-    rgb(247, 247, 247) 104px 104px,
-    rgb(247, 247, 247) 105px 105px,
-    rgb(247, 247, 247) 106px 106px,
-    rgb(248, 248, 248) 107px 107px,
-    rgb(248, 248, 248) 108px 108px,
-    rgb(248, 248, 248) 109px 109px,
-    rgb(248, 248, 248) 110px 110px,
-    rgb(248, 248, 248) 111px 111px,
-    rgb(248, 248, 248) 112px 112px,
-    rgb(248, 248, 248) 113px 113px,
-    rgb(248, 248, 248) 114px 114px,
-    rgb(248, 248, 248) 115px 115px,
-    rgb(248, 248, 248) 116px 116px,
-    rgb(248, 248, 248) 117px 117px,
-    rgb(248, 248, 248) 118px 118px,
-    rgb(248, 248, 248) 119px 119px,
-    rgb(249, 249, 249) 120px 120px,
-    rgb(249, 249, 249) 121px 121px,
-    rgb(249, 249, 249) 122px 122px,
-    rgb(249, 249, 249) 123px 123px,
-    rgb(249, 249, 249) 124px 124px,
-    rgb(249, 249, 249) 125px 125px,
-    rgb(249, 249, 249) 126px 126px,
-    rgb(249, 249, 249) 127px 127px,
-    rgb(249, 249, 249) 128px 128px,
-    rgb(249, 249, 249) 129px 129px,
-    rgb(249, 249, 249) 130px 130px,
-    rgb(249, 249, 249) 131px 131px,
-    rgb(249, 249, 249) 132px 132px,
-    rgb(249, 249, 249) 133px 133px,
-    rgb(250, 250, 250) 134px 134px,
-    rgb(250, 250, 250) 135px 135px,
-    rgb(250, 250, 250) 136px 136px,
-    rgb(250, 250, 250) 137px 137px,
-    rgb(250, 250, 250) 138px 138px,
-    rgb(250, 250, 250) 139px 139px,
-    rgb(250, 250, 250) 140px 140px,
-    rgb(250, 250, 250) 141px 141px,
-    rgb(250, 250, 250) 142px 142px,
-    rgb(250, 250, 250) 143px 143px,
-    rgb(250, 250, 250) 144px 144px,
-    rgb(250, 250, 250) 145px 145px,
-    rgb(250, 250, 250) 146px 146px,
-    rgb(251, 251, 251) 147px 147px,
-    rgb(251, 251, 251) 148px 148px,
-    rgb(251, 251, 251) 149px 149px,
-    rgb(251, 251, 251) 150px 150px,
-    rgb(251, 251, 251) 151px 151px,
-    rgb(251, 251, 251) 152px 152px,
-    rgb(251, 251, 251) 153px 153px,
-    rgb(251, 251, 251) 154px 154px,
-    rgb(251, 251, 251) 155px 155px,
-    rgb(251, 251, 251) 156px 156px,
-    rgb(251, 251, 251) 157px 157px,
-    rgb(251, 251, 251) 158px 158px,
-    rgb(251, 251, 251) 159px 159px,
-    rgb(252, 252, 252) 160px 160px,
-    rgb(252, 252, 252) 161px 161px,
-    rgb(252, 252, 252) 162px 162px,
-    rgb(252, 252, 252) 163px 163px,
-    rgb(252, 252, 252) 164px 164px,
-    rgb(252, 252, 252) 165px 165px,
-    rgb(252, 252, 252) 166px 166px,
-    rgb(252, 252, 252) 167px 167px,
-    rgb(252, 252, 252) 168px 168px,
-    rgb(252, 252, 252) 169px 169px,
-    rgb(252, 252, 252) 170px 170px,
-    rgb(252, 252, 252) 171px 171px,
-    rgb(252, 252, 252) 172px 172px,
-    rgb(252, 252, 252) 173px 173px,
-    rgb(253, 253, 253) 174px 174px,
-    rgb(253, 253, 253) 175px 175px,
-    rgb(253, 253, 253) 176px 176px,
-    rgb(253, 253, 253) 177px 177px,
-    rgb(253, 253, 253) 178px 178px,
-    rgb(253, 253, 253) 179px 179px,
-    rgb(253, 253, 253) 180px 180px,
-    rgb(253, 253, 253) 181px 181px,
-    rgb(253, 253, 253) 182px 182px,
-    rgb(253, 253, 253) 183px 183px,
-    rgb(253, 253, 253) 184px 184px,
-    rgb(253, 253, 253) 185px 185px,
-    rgb(253, 253, 253) 186px 186px,
-    rgb(254, 254, 254) 187px 187px,
-    rgb(254, 254, 254) 188px 188px,
-    rgb(254, 254, 254) 189px 189px,
-    rgb(254, 254, 254) 190px 190px,
-    rgb(254, 254, 254) 191px 191px,
-    rgb(254, 254, 254) 192px 192px,
-    rgb(254, 254, 254) 193px 193px,
-    rgb(254, 254, 254) 194px 194px,
-    rgb(254, 254, 254) 195px 195px,
-    rgb(254, 254, 254) 196px 196px,
-    rgb(254, 254, 254) 197px 197px,
-    rgb(254, 254, 254) 198px 198px,
-    rgb(254, 254, 254) 199px 199px,
-    rgb(255, 255, 255) 200px 200px;
-   background-color: rgb(255, 255, 255);
-  font-size: 75px;
-  line-height: 150px;
-  text-align: center;
-        margin: 0px;
-        padding-top: 26vh;
-}
-        
-        footer {
-            width: 100%;
-            height: 500px;
-            border-top: 1px solid black;
-            position: relative;
-        }
-        footer h3 {
-            font-weight: 300;
+        header h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
             text-align: center;
-            font-size: 1.4em;
-            padding-top: 115px;
-            color: black;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0);
+            margin: 0px;
+            color: #EEEEEE;
+            padding-top: 15vh;
+            font-size: 1.8em;
+            padding-bottom: 11vh;
         }
-        footer paper-button {
+        .n5-outline {
+            width: 270px;
+            height: 510px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .subhead {
+            width: 100%;
+            min-height: 65vh;
+        }
+        
+        .sub {
+             font-family: 'Roboto', sans-serif;
             font-weight: 400;
+            text-align: center;
+            margin: 0px;
+            color: #616161;
+            padding-top: 15vh;
+            font-size: 1.5em;
+            padding-bottom: 11vh;
         }
-        paper-button#gplus a {
-            text-decoration: none;
-            color: black;
-        }
-        paper-button#twitter {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-        paper-button#twitter a {
-            text-decoration: none;
-            color: black;
-        }
-        paper-button#facebook a {
-            text-decoration: none;
-            color: black;
-        }
-        div.main {
-            min-height: 100%;
-        }
-        core-scroll-header-panel {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: transparent;
-        }
-
-        /* background for toolbar when it is at its full size */
-        core-scroll-header-panel::shadow #headerBg {
-            background-color: transparent;
-        }
-        core-toolbar {
-            color: black;
-            fill: #f1f1f1;
-            background-color: transparent;
+        .new {
+            width: 100%;
+            min-height: 50vh;
+            background-color: #E0E0E0;
         }
         
-        .content {
-            background-color: white;
+        .new div:first-child {
+            margin-left: 10vw;
+        }
+        .new div ul {
+            display: block;
+            text-align:center;
+        }
+        .new div ul li {
+            list-style: none;
+            padding-bottom: 15px;
+            display: block;
+        }
+        .new div ul li a {
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            list-style: none;
         }
         
-        [drawer] {
-            background-color:white;
+        .new div:last-child {
+            margin-right: 10vw;
         }
-        core-toolbar h1.title {
-            font-weight: 300;
+        .new div h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
+            text-align: center;
+            margin: 0px;
+            color: #616161;
+            padding-top: 7vh;
             font-size: 1.4em;
-        }
-        paper-icon-button.polymer {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0);
-            bottom: 7vh;
-            color: black;
-        }
-        section.post-tweet {
-            width: 485px;
-            margin: 0 auto;
-            padding-top: 100px;
+            padding-bottom: 2vh;
         }
         
-        section.post-gplus {
-            width: 440px;
-            margin: 0 auto;
-            padding-top: 100px;
-        }
-        
-        paper-fab {
-            background-color:black;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 0);
-            top: 70vh;
-            color: white;
-        }
-        
-        div.imgCont {
+        .members {
             width: 100%;
-            height: 80%;
-            margin-top: 460px;
+            height: 40vh;
         }
-        
-        section.modern {
-            width: 100%;
-            height: 70vh;
-            margin-top: 200px;
-        }
-        
-        section.modern h2 {
-            padding-top: 10vh;
+        .members h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
             text-align: center;
-            font-weight: 300;
+            margin: 0px;
+            padding-top: 7vh;
         }
-        
-        section.modern img.icon {
-            width: 100px;
-            min-width: 100px;
-            height: 100px;
-            min-height: 100px;
-            padding-left: 20px;
-        }
-        
-        section.modern div.icons {
-            margin-top: 18vh;
-            width: 100%;
-            min-height: 100px;
-        }
-        
-        section.why {
-            width: 100%;
-            height: 70vh;
-            margin-top: 100px;
-        }
-        
-        section.why h2 {
-            padding-top: 10vh;
-            text-align: center;
-            font-weight: 300;
-        }
-        
         
         section.about {
             width: 100%;
-            height: 70vh;
-            margin-top: 175px;
-            background-color: black;
-            color: white;
+            min-height: 40vh;
+            color: black;
         }
         
         section.about h2 {
             padding-top: 10vh;
             text-align: center;
             font-weight: 300;
-            padding-bottom: 13vh;
+            padding-bottom: 14vh;
+            margin: 0px;
         }
         
         div.members {
@@ -417,98 +148,180 @@
         img.round:hover {
             opacity: 0.8;
         }
-
-        @media screen and (max-width: 768px) {
-            section.post {
-                width: 100%;
-            }
-            img.round {
-                border-radius: 50%;
-                width: 75px;
-                height: 75px;
-                min-width: 75px;
-                min-height: 75px;
-                margin-right: 25px;
-            }
-            div.stack {
-                min-width: 100%;
-                width: 100%;
-                height: 125px;
-                margin-top: 100px;
-                margin-left: -90%;
-            }
+        
+        img.nex {
+            width: 288px;
+            height: 535px;
+            margin-left: 18vw;
+        }
+        
+        div#overlay {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: white;
+            overflow-y: scroll;
+            z-index: 901;
+        }
+        
+        #closeOverlay {
+            color: black;
+            position: fixed;
+            left: 8px;
+            top: 8px;
+            z-index: 909;
+        }
+        
+        div#userHeader {
+            width: 100%;
+            height: 30vh;
+            background-image: url(img/Mr.%20Lee.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #profile {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-left: 20vw;
+            margin-top: 5vh;
+        }
+        #name {
+            color: black;
+            margin-top: -175px;
+        }
+        #about {
+            color: black;
+            text-align: left;
+            text-indent: 40px;
+            line-height: 150%;
+            width: 40vw;
+            min-height: 20vh;
+            margin: 0 auto;
+        }
+        paper-footer::shadow .main-footer {
+            background-color: #252525;
+            color: white;
+        }
+        paper-footer::shadow .bottom-footer {
+            background-color: #212121;
+            color: white;
+        }
+        div[top] h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        
+        div[top] ul {
+            margin: 0;
+            list-style-type: none;
+            text-align: left;
+        }
+        div[top] li {
+            list-style: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
+        }
+        div[bottom] p {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
+            font-size: 0.8em;
+            text-align: center;
+            margin: 0px;
+            padding-top: 14px;
         }
     </style>
 </head>
 <body>
-        <core-drawer-panel responsiveWidth="1000000px">
-          <core-header-panel drawer>
-              
-          </core-header-panel> 
-            
-          <core-scroll-header-panel fixed main>
-            <core-toolbar class="short">
-                <paper-icon-button class="menu" icon="menu" core-drawer-toggle></paper-icon-button>
-                <div flex></div>
-                <paper-menu-button>
-                    <paper-icon-button icon="more-vert" noink></paper-icon-button>
-                    <paper-dropdown class="dropdown" halign="right">
-                      <core-menu class="more-vert">
-                          <paper-item>More</paper-item>
-                      </core-menu>
-                    </paper-dropdown>
-                  </paper-menu-button>
-            </core-toolbar>
-              
-            <div class="content">
-                <main>
-                    
-                    <h1 class="title">BLITE UI</h1>
-                    <paper-fab src="img/chevron-down.png" class="down"></paper-fab>
-                    
-    
-                    <div class="imgCont" horizontal center-justified layout>
-                        <core-image class="second" src="img/cover.jpg" self-center></core-image>
+    <core-scaffold responsiveWidth="100000000px">
+        <core-header-panel navigation flex>
+        
+        </core-header-panel>
+        <div flex tool></div>
+        <paper-icon-button tool icon="more-vert" class="vert-center"></paper-icon-button>
+        <div class="content">
+            <header>
+                <h1>Modern Material Design, Old School Black and White.</h1>
+                <img class="n5-outline" src="img/nexus-5-outline.png">
+            </header>
+            <main>
+                <section class="subhead" vertical layout>
+                    <h2 class="sub">Blite UI Features Tons of Premium Icons and Wallpapers</h2>
+                    <paper-lightbox self-center>
+                        <img src="img/thumbnailred.png" data-fullimage="img/wallpaper2red.png"></img>
+                        <img src="img/thumbnail2.png" data-fullimage="img/MaterialWallpaper56.2.png"></img>
+                        <img src="img/thumbnail3.png" data-fullimage="img/wallpaper3.png"></img>
+                    </paper-lightbox>
+                </section>
+                <section class="new">
+                    <template is="auto-binding">
+                    <core-media-query query="max-width: 640px"
+                    queryMatches="{{phoneScreen}}"></core-media-query>
+                    <div layout vertical?="{{phoneScreen}}"
+       horizontal?="{{!phoneScreen}}">
+                        <div auto-vertical flex>
+                        <h2>Updates</h2>
+                        <ul>
+                            <li>Alpha 0.0.1 Release</li>
+                        </ul>
                     </div>
-                    
-                    <section class="modern">
-                        <h2>Modern Lollipop Design, New Age Black and White.</h2>
-                        <div class="icons" horizontal center-justified layout>
-                            <img src="img/calendar-icon.png" class="icon">
-                            <img src="img/print-icon.png" class="icon">
-                            <img src="img/internet-icon.png" class="icon">
+                    <div auto-vertical flex>
+                        <h2>Team News</h2>
+                    </div>
+                    <div auto-vertical flex>
+                        <h2>Blog Updates</h2>
+                    </div>
+                   </template>
+                </section>
+                <section class="about">
+                        <h2 class="title">Team</h2>
+                        <div id="overlay">
+                            <paper-icon-button id="closeOverlay" icon="close"></paper-icon-button>
+                            <div id="userHeader"></div>
+                            <img id="profile">
+                            <h2 id="name">NAME</h2>
+                            <p id="about">ABOUT</p>
                         </div>
-                    </section>
-                    
-                    <section class="why">
-                        <h2>Why Blite UI?</h2>
-                    </section>
-                    
-                    <section class="about">
-                        <h2 class="title">About Us</h2>
                         <div class="members" horizontal center-justified layout>
-                            <img class="round" src="https://lh6.googleusercontent.com/-wrY0cdl4t9M/VQo8UoiszyI/AAAAAAAADMs/g-79xs2PC6Y/w680-h677-no/7aa371d6-2a5e-4a6b-bad6-74a1c5570110">
-                            <img class="round" src="https://lh6.googleusercontent.com/-ujDb67hprWA/VR2M_cyUvKI/AAAAAAAACQM/rH9CGhuT8Kc/s500-no/67e14530-f18e-4d3f-b723-68e8b5daa1fd">
-                            <img class="round" src="https://lh4.googleusercontent.com/-07hAqTdhxSM/VOu96EK6VUI/AAAAAAAAGvo/DRSgNnCkb7g/w905-h907-no/image.jpg">
-                            <div class="stack">
-                                <img class="round" src="https://lh6.googleusercontent.com/-V1W1O9RJPxU/VR28Pxv1uVI/AAAAAAAAbJo/Aj1v0Vlcbug/s889-no/3b6ec740-629f-4edc-a278-18e9b4ddb685">
-                                <img class="round" src="https://lh4.googleusercontent.com/-3pgnF50g8rs/VRm61DWUd-I/AAAAAAAAK5Y/XeK_zynA6ME/s384-no/a853f482-5f3c-4dc1-8e95-a35f6d85df6b">
-                                <img class="round" src="https://lh5.googleusercontent.com/-7Ve1p-SYaz8/VRiG95vHB1I/AAAAAAAAHNs/Grzfv8XNVRc/s512-no/31125bf4-f3d7-4e54-837c-31ee509ea6a8">
-                            </div>
+                                    <img class="round" id="one" src="https://lh5.googleusercontent.com/-VT_akLkIJCY/VTvs98sot8I/AAAAAAAAE2Q/Wl1UKHcTycE/w902-h898-no/c0d279f1-0959-4ec8-b9dc-721594824eb9">
+                                    <img class="round" id="two" src="https://lh3.googleusercontent.com/-UY_VSjkjFYI/VUqXjP0ZJvI/AAAAAAAADIk/pfsahUGBnGc/s529-no/ad01341b-b440-47e2-85be-fcb92299d389">
+                                    <img class="round" id="three" src="https://lh4.googleusercontent.com/-07hAqTdhxSM/VOu96EK6VUI/AAAAAAAAGvo/DRSgNnCkb7g/w905-h907-no/image.jpg">
+                                    <img class="round" id="four" src="https://lh4.googleusercontent.com/-s4ClDLV1yEY/VSguK8pJTII/AAAAAAAAb1c/78r9VQbenIw/s795-no/cb96dcab-8f17-41dd-965b-2eb4ceb5fae6">
+                                    <img class="round" id="five" src="https://lh4.googleusercontent.com/-3pgnF50g8rs/VRm61DWUd-I/AAAAAAAAK5Y/XeK_zynA6ME/s384-no/a853f482-5f3c-4dc1-8e95-a35f6d85df6b">
+                                    <img class="round" id="six" src="https://lh3.googleusercontent.com/-pkU1gdSxVyA/VR9I7pcx6aI/AAAAAAAAHyc/8Dqo2S2V4XY/s907-no/7baf5254-27b4-4d02-9bc9-d792c7e19f63">
                         </div>
                     </section>
-                </main>
-                
-               <footer horizontal center-justified layout>
-                <h3>Follow Us</h3>
-                   <paper-button id="gplus" self-center><a href="https://plus.google.com/u/0/111353184828720221548/posts" target="_blank">Google +</a></paper-button>
-                   <paper-button id="twitter" self-center><a href="https://twitter.com/EthxnT" target="_blank">Twitter</a></paper-button>
-                   <paper-button id="facebook" self-center><a href="https://www.facebook.com/ethan.taylor.35175" target="_blank">Facebook</a></paper-button>
-                   <a href="https://www.polymer-project.org/0.5/" target="_blank"><paper-icon-button icon="polymer" class="polymer"></paper-icon-button></a>
-                </footer>
-            </div>
-              
-        </core-scroll-header-panel>
-    </core-drawer-panel>
+            </main>
+            <paper-footer>
+                <div top>
+                  <template is="auto-binding">
+                    <core-media-query query="max-width: 640px"
+                    queryMatches="{{phoneScreen}}"></core-media-query>
+                    <div layout vertical?="{{phoneScreen}}"
+       horizontal?="{{!phoneScreen}}">
+                        <div auto-vertical flex>
+                            <h2>JABE DEVS</h2>
+                            <ul>
+                                <li>Google +</li>
+                                <li>Twitter</li>
+                                <li>Facebook</li>
+                            </ul>
+                        </div>
+                        <div auto-vertical flex>
+                            <h2>BETA</h2>
+                        </div>
+                    </div>
+                   </template>
+                </div>
+                <div bottom>
+                    <p>© 2015 JABE Devs All Rights Reserved</p>
+                </div>
+            </paper-footer>
+        </div>
+    </core-scaffold>
 </body>
 </html>

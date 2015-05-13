@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "sizzle.js",
+        "C:/Users/Ethan/Documents/GitHub/BliteUI/bower_components/web-animations-js/src/property-interpolation.js",
+        "C:/Users/Ethan/Documents/GitHub/BliteUI/js/main.js"
+    ]
+}
